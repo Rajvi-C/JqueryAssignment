@@ -57,6 +57,8 @@ $(document).ready(function () {
       passwordError.text("Password is required.");
     } else if (password.length < 6) {
       passwordError.text("Password must be at least 6 characters.");
+    } else if (password.length > 20) {
+      passwordError.text("Password must be less than 20 characters.");
     } else {
       passwordError.text("");
     }
