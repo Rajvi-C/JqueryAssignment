@@ -3,9 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/calculator.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <h1>calculatior page</h1>
+    <div class="container">
+      <h2>Welcome, <span id="usernameDisplay"></span></h2>
+
+      <div class="input-group">
+        <label for="number1">Number 1:</label>
+        <input type="text" id="number1" />
+        <span id="number1Error" class="error"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="number2">Number 2:</label>
+        <input type="text" id="number2" />
+        <span id="number2Error" class="error"></span>
+      </div>
+
+      <div class="button-group">
+        <button id="addBtn">Add</button>
+        <button id="subtractBtn">Subtract</button>
+        <button id="multiplyBtn">Multiply</button>
+        <button id="divideBtn">Divide</button>
+      </div>
+
+      <div class="result-group">
+        <h3>Result:</h3>
+        <input type="text" id="result" disabled />
+      </div>
+    </div>
+
+    <script src="./js/calculator.js"></script>
   </body>
 </html>

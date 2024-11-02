@@ -12,8 +12,6 @@ $(document).ready(function () {
       $("#password").val().trim() !== "" &&
       $("#confirmPassword").val().trim() !== "";
 
-    console.log(isFormValid);
-
     $("#button").prop("disabled", !isFormValid);
   }
 
@@ -80,10 +78,12 @@ $(document).ready(function () {
     checkFormValidity();
   });
 
-  $("#registrationForm").on("click", function (e) {
+  $("#button").on("click", function (e) {
     e.preventDefault();
     if ($("#button").prop("disabled") === false) {
       window.location.href = "calculator.html";
+      const username = $("#username").val();
+      sessionStorage.setItem("username", username);
     }
   });
 });
